@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/txtloaithu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:text="Tên Loại Thu"
+        android:textSize="20dp" />
+
+   <ImageView
+       android:id="@+id/loaithusua"
+       android:layout_weight="0.5"
+       android:layout_width="25dp"
+       android:layout_height="27dp"
+       android:src="@drawable/edit_icon"/>
+</LinearLayout>

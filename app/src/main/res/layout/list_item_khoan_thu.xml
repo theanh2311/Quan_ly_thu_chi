@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_weight="10"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="9"
+        android:text="Tên Khoản Thu"
+        android:textSize="20dp"
+        android:id="@+id/txtkhoanthu"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/edit_icon"
+        android:id="@+id/khoanthusua"/>
+
+    <ImageView
+        android:layout_weight="0.5"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/delete_icon"
+        android:id="@+id/khoanthuxoa"/>
+</LinearLayout>
