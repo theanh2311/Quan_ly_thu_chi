@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         android:textColor="@android:color/black"
-        android:text="Assignment MOB202"/>
+        android:text="NTA2K"/>
 
 </LinearLayout>

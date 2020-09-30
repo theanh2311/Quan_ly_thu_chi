@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class Database extends SQLiteOpenHelper {
-    public Database(Context context) {super(context,"assignment.sqlite",null,1);}
+    public Database(Context context) {
+        super(context,"assignment.sqlite",null,1);
+    }
     public  void SendData(String sql)
     {
         SQLiteDatabase db = getWritableDatabase();
