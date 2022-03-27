@@ -4,8 +4,8 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Home"/>
     <item android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Dashboard"
+        android:icon="@drawable/a"
+        android:title="Time"
         />
     <item android:icon="@drawable/ic_notification_black_24dp"
         android:id="@+id/navigation_notifications"
