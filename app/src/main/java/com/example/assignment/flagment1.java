@@ -2,10 +2,13 @@ package com.example.assignment;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,11 +25,14 @@ import java.util.ArrayList;
 public class flagment1 extends Fragment {
     public flagment1() {
     }
+    int tongChi  = 0;
+    int tongThu = 0;
     private View rootview;
     ArrayList<ThongKeThu> list;
     ArrayList<ThongKeChi> list1;
     ThongKeThuAdapter adapter;
     ThongKeChiAdapter adapter1;
+    TextView tvTongThu,tvTongChi;
     ListView lv_thongkethu;
     ListView lv_thongkechi;
     Database database;
@@ -39,6 +45,8 @@ public class flagment1 extends Fragment {
         return rootview;
     }
     private void initView(){
+        tvTongChi = rootview.findViewById(R.id.tv_tongChi);
+        tvTongThu = rootview.findViewById(R.id.tv_tongThu);
         list = new ArrayList<>();
         lv_thongkethu = rootview.findViewById(R.id.lv_thongkethu);
         database  = new Database(getActivity());
@@ -50,9 +58,11 @@ public class flagment1 extends Fragment {
             String b = datathongkethu.getString(1);
             String c = datathongkethu.getString(2);
             list.add(new ThongKeThu(a,b,c));
+            tongThu += Integer.parseInt(b);
         }
         adapter.notifyDataSetChanged();
         lv_thongkethu.setAdapter(adapter);
+        tvTongThu.setText("Tổng thu:"+tongThu);
 
         list1 = new ArrayList<>();
         lv_thongkechi = rootview.findViewById(R.id.lv_thongkechi);
@@ -64,8 +74,11 @@ public class flagment1 extends Fragment {
             String b = datathongkechi.getString(1);
             String c = datathongkechi.getString(2);
             list1.add(new ThongKeChi(a,b,c));
+            tongChi += Integer.parseInt(b);
         }
         adapter1.notifyDataSetChanged();
         lv_thongkechi.setAdapter(adapter1);
+        tvTongChi.setText("Tổng Chi:"+tongChi);
+
     }
 }
